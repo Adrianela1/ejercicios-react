@@ -3,12 +3,13 @@ import Navbar from './Components/Navbar.jsx'
 import Main from './Components/Main.jsx'
 import Astros from './Components/Astros.jsx'
 import './App.css'
+import About from './Components/About/About.jsx';
 
 function App() {
 
     const linksData = [
         { name: 'Home', href: '/'},
-        { name: 'About', href: '/'},
+        { name: 'About', href: '/about'},
         { name: 'Astros', href: '/astros'},
     ]
 
@@ -19,6 +20,10 @@ function App() {
                 <Route
                     element={<Main />}
                     path='/'
+                />
+                 <Route
+                    element={<About />}
+                    path='/about'
                 />
                 <Route 
                     element={<Astros />}
